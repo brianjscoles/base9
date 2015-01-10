@@ -206,7 +206,3 @@ function fetchPageFromEventbriteAPI(reqUrl,pageNumber){
     });
   });
 }
-
-
-
-
