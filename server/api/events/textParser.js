@@ -13,17 +13,20 @@ for(var category in CATEGORY_KEYWORDS){
   var keywords = CATEGORY_KEYWORDS[category].split(', ');
   keywords.forEach(function(keyword){
     KEYWORD_MAP[keyword] = category;
-  })
+  });
 }
 
 
 module.exports = function(text){
+  var times = getTimes(text);
+
+
   return {
     category: getCategory(text),
-    title: text.slice(0,70),
-    address:
-    startTime:
-    endTime:
+    title: text.slice(0,text.indexOf('\n')),  //will this \n slicing work? depends on the text that is passed in.
+    address: getAddress(text),
+    startTime: times[0],
+    endTime: times[1],
     price: getPrice(text)
   };
 };
@@ -65,8 +68,10 @@ function getPrice(text){
  
 
   var dollarSignIndex = text.indexOf('$');
+  var price;
+
   if(dollarSignIndex !== -1){
-    var price = text.slice(dollarSignIndex+1,dollarSignIndex+10);
+    price = text.slice(dollarSignIndex+1,dollarSignIndex+10);
     price = price.slice(0, price.indexOf(' '));
     if('0123456789'.indexOf(price[price.length-1]) === -1){
         price = price.slice(0,price.length-1);
@@ -78,20 +83,27 @@ function getPrice(text){
   return(Number(price));
 }
 
+function getAddress(text){
+  
+  //look for address numbers - numbers of length 3 to 4, usually.
+  //look for two capital letters such as CA, NY, CO
+  //look for a zip code - five digit number.  goldmine!
+  //look for a preponderance of commas.
+  //look for Capitalized Words - the street name.
+  //look for the words 'address', 'venue', etc.
+
+  //if conflicted - i.e. there were multiple hits for some of these fields -
+    //based on the index of all these things (do string.search(/regex/))
+    //grab a best-guess chunk of the text.  eg. average index is 80.  slice 60 to 120.
+    //then, within that chunk, search again.
+
+  //if not conflicted - just grab stuff from the main body.
+    
+}
+
+function getTimes(text){
 
 
-  // evnt.string('title', 255);
-  // evnt.bigInteger('startTime', 255);
-  // evnt.bigInteger('endTime', 255);
-  // evnt.integer('price');
-  // evnt.string('info', 2000);
-  // evnt.string('category', 50);
-  // evnt.string('streetAddress1', 100);
-  // evnt.string('streetAddress2', 100);
-  // evnt.string('city', 100);
-  // evnt.string('state', 20);
-  // evnt.string('zipCode', 40);
-  // evnt.timestamps();
-
-
+  
+}
 
