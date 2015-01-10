@@ -62,6 +62,8 @@ function getCategory(text){
 
 
 function getPrice(text){
+ 
+
   var priceIndex = text.indexOf('$');
   if(priceIndex !== -1){
     var price = text.slice(priceIndex+1,priceIndex+10);
@@ -69,6 +71,9 @@ function getPrice(text){
     if('0123456789'.indexOf(price[price.length-1]) === -1){
         price = price.slice(0,price.length-1);
     }
+  } else {
+    //TODO: also hunt for 'dollars, bucks' and then grab the number just before it.
+
   }
   return(Number(price));
 }
