@@ -39,10 +39,10 @@ function getCategory(text){
   var categoryConfidence = {};
 
   words.forEach(function(word){
-    var categoryOfWord = KEYWORD_MAP[word];
-    if(categoryOfWord){
-      categoryConfidence[categoryOfWord] = categoryConfidence[categoryOfWord] || 0;
-      categoryConfidence[categoryOfWord]++;
+    var wordCategory = KEYWORD_MAP[word];
+    if(wordCategory){
+      categoryConfidence[wordCategory] = categoryConfidence[wordCategory] || 0;
+      categoryConfidence[wordCategory]++;
     }
   });
 
@@ -64,9 +64,9 @@ function getCategory(text){
 function getPrice(text){
  
 
-  var priceIndex = text.indexOf('$');
-  if(priceIndex !== -1){
-    var price = text.slice(priceIndex+1,priceIndex+10);
+  var dollarSignIndex = text.indexOf('$');
+  if(dollarSignIndex !== -1){
+    var price = text.slice(dollarSignIndex+1,dollarSignIndex+10);
     price = price.slice(0, price.indexOf(' '));
     if('0123456789'.indexOf(price[price.length-1]) === -1){
         price = price.slice(0,price.length-1);
