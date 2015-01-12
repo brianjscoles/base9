@@ -1,8 +1,8 @@
 //this will alter the global object 'Date'
 // require('./date.js');
 
-var Promise = require('bluebird');
-var request = Promise.promisify(require('request'));
+var Bluebird = require('bluebird');
+var request = Bluebird.promisify(require('request'));
 var Event = require('./events.model.js');
 
 
@@ -118,10 +118,7 @@ function makeThrottledFunction(callback,interval){
 //accepts a rating integer and converts it to a scale of 1-5.
 //(somewhat arbitrarily)
 function getPopularity(rating){
-  var popularity = Math.ceil(rating / 20);
-  popularity = Math.max(popularity, 1);
-  popularity = Math.min(popularity, 5);
-  return popularity;
+  return Math.min(Math.max(Math.ceil(rating / 20), 1), 5);
 }
 
 // LONGITUDE -180 to + 180

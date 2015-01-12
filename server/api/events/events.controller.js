@@ -1,7 +1,7 @@
 
 var Event = require('./events.model.js');
-var Promise = require('bluebird');
-var request = Promise.promisify(require('request'));
+var Bluebird = require('bluebird');
+var request = Bluebird.promisify(require('request'));
 var utils = require('./utils.js');
 var crontab = require('node-crontab');
 
