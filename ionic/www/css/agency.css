@@ -38,10 +38,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto; }
 
 .bg-light-gray {
-  background-color: #f7f7f7; }
+  background-color: #DEDEDE; }
 
-.bg-darkest-gray {
-  background-color: #222; }
+.bg-dark-gray {
+  background-color: #222;
+  color: #DEDEDE; }
 
 .btn-primary {
   border-color: #fed136;
@@ -381,4 +382,5 @@ body {
 .image-tile {
   width: 100%;
   border-radius: 10px;
+  border: 3px solid #222;
   overflow: hidden; }

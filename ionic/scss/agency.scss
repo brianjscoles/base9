@@ -5,11 +5,12 @@
  */
 
 
-$light_bg:       rgb(255,255,246);
-$dark_bg:        rgb(0,0,0);
-$primary_dark:   #fed136;
+
+$darker_yellow:   #fed136;
 $primary_yellow: #FEC503;
-$light_gray:     #f7f7f7;
+
+
+$light_gray:     #DEDEDE;
 $dark_gray:      #222;
 
 
@@ -23,7 +24,7 @@ body {
 }
 
 .text-primary {
-    color: $primary_dark;
+    color: $darker_yellow;
 }
 
 p {
@@ -44,7 +45,7 @@ a.active {
 }
 
 a {
-    color: $primary_dark;
+    color: $darker_yellow;
 }
 
 a:hover,
@@ -73,17 +74,18 @@ h6 {
     background-color: $light_gray;
 }
 
-.bg-darkest-gray {
+.bg-dark-gray {
     background-color: $dark_gray;
+    color: $light_gray;
 }
 
 .btn-primary {
-    border-color: $primary_dark;
+    border-color: $darker_yellow;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #fff;
-    background-color: $primary_dark;
+    background-color: $darker_yellow;
 }
 
 .btn-primary:hover,
@@ -117,25 +119,25 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: $primary_dark;
-    background-color: $primary_dark;
+    border-color: $darker_yellow;
+    background-color: $darker_yellow;
 }
 
 .btn-primary .badge {
-    color: $primary_dark;
+    color: $darker_yellow;
     background-color: #fff;
 }
 
 .btn-xl {
     padding: 20px 40px;
-    border-color: $primary_dark;
+    border-color: $darker_yellow;
     border-radius: 3px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: #fff;
-    background-color: $primary_dark;
+    background-color: $darker_yellow;
 }
 
 .btn-xl:hover,
@@ -169,12 +171,12 @@ fieldset[disabled] .btn-xl:active,
 .btn-xl.disabled.active,
 .btn-xl[disabled].active,
 fieldset[disabled] .btn-xl.active {
-    border-color: $primary_dark;
-    background-color: $primary_dark;
+    border-color: $darker_yellow;
+    background-color: $darker_yellow;
 }
 
 .btn-xl .badge {
-    color: $primary_dark;
+    color: $darker_yellow;
     background-color: #fff;
 }
 
@@ -186,7 +188,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-brand {
     font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color: $primary_dark;
+    color: $darker_yellow;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -201,8 +203,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: $primary_dark;
-    background-color: $primary_dark;
+    border-color: $darker_yellow;
+    background-color: $darker_yellow;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -211,7 +213,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: $primary_dark;
+    background-color: $darker_yellow;
 }
 
 .navbar-default .nav li a {
@@ -225,13 +227,13 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: $primary_dark;
+    color: $darker_yellow;
 }
 
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
     color: #fff;
-    background-color: $primary_dark;
+    background-color: $darker_yellow;
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
@@ -424,7 +426,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: $primary_dark;
+    background-color: $darker_yellow;
 }
 
 .btn:focus,
@@ -514,12 +516,12 @@ ul.social-buttons li a:active {
 
 ::-moz-selection {
     text-shadow: none;
-    background: $primary_dark;
+    background: $darker_yellow;
 }
 
 ::selection {
     text-shadow: none;
-    background: $primary_dark;
+    background: $darker_yellow;
 }
 
 img::selection {
@@ -531,11 +533,12 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: $primary_dark;
+    webkit-tap-highlight-color: $darker_yellow;
 }
 
 .image-tile {
     width: 100%;
     border-radius: 10px;
+    border: 3px solid $dark_gray;
     overflow: hidden;
 }
