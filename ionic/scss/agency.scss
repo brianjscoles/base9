@@ -138,6 +138,7 @@ fieldset[disabled] .btn-primary.active {
     font-weight: 700;
     color: #fff;
     background-color: $darker_yellow;
+    margin: 20px 20px 0 0;
 }
 
 .btn-xl:hover,
@@ -278,7 +279,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
+    background-image: url(../img/dummy-header-bg.png);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -405,6 +406,7 @@ footer ul.quicklinks {
 
 ul.social-buttons {
     margin-bottom: 0;
+    margin-top: 7px;
 }
 
 ul.social-buttons li a {
@@ -539,6 +541,6 @@ body {
 .image-tile {
     width: 100%;
     border-radius: 10px;
-    border: 3px solid $dark_gray;
+    border: 2px solid $dark_gray;
     overflow: hidden;
 }

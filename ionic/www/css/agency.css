@@ -77,7 +77,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   font-weight: 700;
   color: #fff;
-  background-color: #fed136; }
+  background-color: #fed136;
+  margin: 20px 20px 0 0; }
 
 .btn-xl:hover, .btn-xl:focus, .btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl {
   border-color: #f6bf01;
@@ -169,7 +170,7 @@ header {
   text-align: center;
   color: #fff;
   background-attachment: scroll;
-  background-image: url(../img/header-bg.jpg);
+  background-image: url(../img/dummy-header-bg.png);
   background-position: center center;
   background-repeat: none;
   -webkit-background-size: cover;
@@ -275,7 +276,8 @@ footer ul.quicklinks {
   line-height: 40px; }
 
 ul.social-buttons {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-top: 7px; }
 
 ul.social-buttons li a {
   display: block;
@@ -382,5 +384,5 @@ body {
 .image-tile {
   width: 100%;
   border-radius: 10px;
-  border: 3px solid #222;
+  border: 2px solid #222;
   overflow: hidden; }
