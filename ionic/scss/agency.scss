@@ -533,3 +533,9 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: $primary_dark;
 }
+
+.image-tile {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}

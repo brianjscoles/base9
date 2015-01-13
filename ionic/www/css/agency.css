@@ -377,3 +377,8 @@ img::-moz-selection {
 
 body {
   webkit-tap-highlight-color: #fed136; }
+
+.image-tile {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden; }
