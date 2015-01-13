@@ -100,8 +100,9 @@ h1, h2, h3, h4, h5, h6 {
   border-color: transparent;
   background-color: #222; }
 
+/* This is what sets the navbar title font */
 .navbar-default .navbar-brand {
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, cursive;
   color: #fed136; }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:active, .navbar-default .navbar-brand.active {
@@ -192,7 +193,7 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-heading {
   margin-bottom: 25px;
   text-transform: uppercase;
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 50px;
   font-weight: 700;
   line-height: 50px; }
@@ -212,7 +213,7 @@ header .intro-text .intro-heading {
   header .intro-text .intro-heading {
     margin-bottom: 50px;
     text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 75px;
     font-weight: 700;
     line-height: 75px; }
