@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'> -->
+
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+  </head>
+  <body ng-app="radar">
+    
+    <!-- ui view -->
+    <div ui-view=""></div>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnemtHaxtZyoxOU0NYEPXNxJwIhG0DeCE&sensor=true&v=3.exp&libraries=places"></script>
+
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!-- // <script src="cordova.js"></script> -->
+
+    <!-- All app js -->
+    <script src="app/core/app.js"></script>
+    <script src="app/map/map.factory.js"></script>
+    <script src="app/filters/search/mapSearch.factory.js"></script>
+    <script src="app/markers/marker.factory.js"></script>
+    <script src="app/http/httpHandler.factory.js"></script>
+    <script src="app/auth/signUp.controller.js"></script>
+    <script src="app/map/map.controller.js"></script>
+    <script src="app/sidebar/sidebar.controller.js"></script>
+
+
+    <!-- Bootstrap -->
+    <script src="lib/ionic/js/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="lib/ionic/js/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+  </body>
+</html>
