@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff; }
 
 .btn-xl {
-  padding: 20px 40px;
+  padding: 15px 30px;
   border-color: #fed136;
   border-radius: 3px;
   text-transform: uppercase;
@@ -186,9 +186,9 @@ header .intro-text {
 header .intro-text .intro-lead-in {
   margin-bottom: 25px;
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 22px;
   font-style: italic;
-  line-height: 22px; }
+  font-size: 16px;
+  line-height: 16px; }
 
 header .intro-text .intro-heading {
   margin-bottom: 25px;
@@ -205,15 +205,12 @@ header .intro-text .intro-heading {
 
   header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 40px;
-    font-style: italic;
-    line-height: 40px; }
+    font-size: 32px;
+    line-height: 32px; }
 
   header .intro-text .intro-heading {
     margin-bottom: 50px;
     text-transform: uppercase;
-    font-family: Arial, sans-serif;
     font-size: 75px;
     font-weight: 700;
     line-height: 75px;
