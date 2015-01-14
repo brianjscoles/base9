@@ -12,6 +12,7 @@ $primary_yellow: #FEC503;
 
 $light_gray:     #DEDEDE;
 $dark_gray:      #222;
+$medium_gray:    #575757;
 
 
 body {
@@ -136,7 +137,7 @@ fieldset[disabled] .btn-primary.active {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 700;
-    color: #fff;
+    color: $medium_gray;
     background-color: $darker_yellow;
     margin: 20px 20px 0 0;
 }
@@ -332,6 +333,7 @@ header .intro-text .intro-heading {
         font-size: 75px;
         font-weight: 700;
         line-height: 75px;
+        color: $darker_yellow;
     }
 }
 

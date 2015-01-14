@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
-  color: #fff;
+  color: #575757;
   background-color: #fed136;
   margin: 20px 20px 0 0; }
 
@@ -216,7 +216,8 @@ header .intro-text .intro-heading {
     font-family: Arial, sans-serif;
     font-size: 75px;
     font-weight: 700;
-    line-height: 75px; }
+    line-height: 75px;
+    color: #fed136; }
  }
 
 section {
