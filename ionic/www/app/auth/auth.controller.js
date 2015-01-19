@@ -36,8 +36,8 @@ angular.module('radar')
   };
 
   $scope.handleLogin = function(email, pwd) {
-    if (!userData.email) {
-      // logic for handling user errors goes here 
+    if (!email) {
+      //TODO: show visible warning/error for user
       return console.log('no email');
     }
     Http.postLogin({
@@ -50,11 +50,11 @@ angular.module('radar')
       $scope.closeModal();
     }).error(function() {
       console.log('invalid username or password');
+      //TODO: give user a visible message upon login failure
     });
   };
 
   $scope.handleSignup = function(userEmail, userPassword, confirmPassword) {
-    console.log('handling signup!');
     if (!(userEmail && userPassword && (userPassword === confirmPassword))) {
       console.log((!(userEmail && userPassword && (userPassword === confirmPassword))));
       console.log(userEmail);
@@ -63,20 +63,19 @@ angular.module('radar')
 
       // logic for handling user errors goes here 
       return console.log('either (invalid email or password) or (passwords don\'t match)');
-    } else {
-      console.log('looks good, submitting now...');
-      Http.postSignup({
-        email: userEmail,
-        pwd: userPassword
-      }).success(function(data, status) {
-        console.log('welcome to the cluuub');
-        $scope.loggedInEmail = userEmail;
-        $scope.loggedIn = true;
-        $scope.closeModal();
-      }).error(function(data, status) {
-        console.log('user already exists');
-      });
     }
+    Http.postSignup({
+      email: userEmail,
+      pwd: userPassword
+    }).success(function(data, status) {
+      console.log('new account created.');
+      $scope.loggedInEmail = userEmail;
+      $scope.loggedIn = true;
+      $scope.closeModal();
+    }).error(function(data, status) {
+      console.log('user already exists');
+      //TODO: show visible error to user
+    });
   };
 
 

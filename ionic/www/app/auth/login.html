@@ -2,10 +2,10 @@
   <div ng-controller="AuthController">
     <div class="formContainer">
       <p class="title">Log In</p>
-      <form ng-submit="Auth.handleLogin(userEmail, userPassword)">
+      <form ng-submit="handleLogin(userEmail, userPassword)">
         <input class="textInput" ng-model="userEmail" type="text" placeholder="Email">
         <input class="textInput" ng-model="userPassword" type="password" placeholder="Password">
-        <button type="submit" class="button button-block button-positive submitButton" ng-click="handleLogin(userEmail, userPassword)">
+        <button type="submit" class="button button-block button-positive submitButton">
         Log In
         </button>
       </form>
