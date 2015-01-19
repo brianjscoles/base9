@@ -43,6 +43,9 @@ function getOne(req, res) {
 }
 
 function addOne(req, res) {
+  if(req.user){
+    req.body.user_id = req.user.attributes.id;
+  }
   request(
     { method: 'POST',
       uri: process.env.PARSER_SERVER_URL + 'api/events/',
