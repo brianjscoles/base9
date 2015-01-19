@@ -1,12 +1,12 @@
 <ion-modal-view class="registerForm">
-  <div ng-controller="AuthController as Auth">
+  <div ng-controller="AuthController">
     <div class="formContainer">
       <p class="title">Register</p>
-      <form ng-submit="handleSignup(userEmail, userPassword)">
+      <form ng-submit="handleSignup(userEmail, userPassword, confirmPassword)">
         <input class="textInput" ng-model="userEmail" type="text" placeholder="Email">
         <input class="textInput" ng-model="userPassword" type="password" placeholder="Password">
         <input class="textInput" ng-model="confirmPassword" type="password" placeholder="Confirm Password">
-        <button type="submit" class="button button-block button-positive submitButton" ng-click="Auth.handleSignup(userEmail, userPassword, confirmPassword)">
+        <button type="submit" class="button button-block button-positive submitButton">
         Sign Up
         </button>
       </form>

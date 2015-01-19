@@ -1,5 +1,8 @@
 angular.module('radar')
-.controller('AuthController', ['$scope', '$http', function($scope, http) {
+.controller('AuthController', [
+  '$scope', 
+  'HttpHandler', 
+  function($scope, Http) {
 
   $scope.signInWithFacebook = function() {
     OAuth.initialize('L3_Da00cNGJ1srYmK7TIzzMyWjI');
@@ -51,21 +54,29 @@ angular.module('radar')
   };
 
   $scope.handleSignup = function(userEmail, userPassword, confirmPassword) {
+    console.log('handling signup!');
     if (!(userEmail && userPassword && (userPassword === confirmPassword))) {
+      console.log((!(userEmail && userPassword && (userPassword === confirmPassword))));
+      console.log(userEmail);
+      console.log(userPassword);
+      console.log(confimPassword);
+
       // logic for handling user errors goes here 
       return console.log('either (invalid email or password) or (passwords don\'t match)');
+    } else {
+      console.log('looks good, submitting now...');
+      Http.postSignup({
+        email: userEmail,
+        pwd: userPassword
+      }).success(function(data, status) {
+        console.log('welcome to the cluuub');
+        $scope.loggedInEmail = userEmail;
+        $scope.loggedIn = true;
+        $scope.closeModal();
+      }).error(function(data, status) {
+        console.log('user already exists');
+      });
     }
-    Http.postSignup({
-      email: userEmail,
-      pwd: userPassword
-    }).success(function(data, status) {
-      console.log('welcome to the cluuub');
-      $scope.loggedInEmail = userEmail;
-      $scope.loggedIn = true;
-      $scope.closeModal();
-    }).error(function(data, status) {
-      console.log('user already exists');
-    });
   };
 
 
